@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import sweetalert from 'sweetalert';
+
 export default {
   data() {
     return {
@@ -56,7 +58,9 @@ export default {
         this.titleText = '';
         this.projectText = '';
         this.isCreating = false;
-      }
+      } else {
+			sweetalert('Error!', 'Please kindly fill the form to create a todo', 'error');
+		}
     },
   },
 };
